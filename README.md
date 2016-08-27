@@ -1,2 +1,2 @@
 # genpass
-Generate Passwords for app in IRL
+Password Generator for Services in IRL 
