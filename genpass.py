@@ -3,12 +3,14 @@ from __future__ import print_function
 import argparse
 
 import hashes, backends
+from world import *
 
 word_used = ""
 
 def random_word():
+    import random
     global word
-    word = "legacy"  # need some awesome words 
+    word = random.choice(words)  # need some awesome words 
     return word
 
 if __name__== '__main__':
