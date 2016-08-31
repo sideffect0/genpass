@@ -6,4 +6,5 @@ python:
   - "3.4"
   - "3.5"
   - "pypy"
+install: "pip install -r dev-requirements.txt"
 script: py.test
