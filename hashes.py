@@ -9,23 +9,23 @@ def hashlib_func(func):
     return do_hash
 
 @hashlib_func
-def sha512(data):
+def sha512():
     pass
 
 @hashlib_func
-def sha256(data):
+def sha256():
     pass
 
 @hashlib_func
-def md5(data):
+def md5():
     pass
 
 @hashlib_func
-def sha1(data):
+def sha1():
     pass
 
 @hashlib_func
-def sha224(data):
+def sha224():
     pass
 
 @hashlib_func
