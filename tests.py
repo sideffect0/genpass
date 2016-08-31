@@ -1,1 +1,1 @@
-import this
+from genpass import parser

@@ -15,11 +15,12 @@ def random_word():
     word = random.choice(words)  # need some awesome words 
     return word
 
+parser = argparse.ArgumentParser(description="Genpass: Generates passwords to use in IRL")
+parser.add_argument("--hash", default="sha512", help="Algorithm to use for example: sha512, random")
+parser.add_argument("--backend", default="stdout", help="Saving backend to use for (default = stdout)")
+parser.add_argument("--data", default=random_word(), help="Human readable word (default = random word )")
+
 if __name__== '__main__':
-    parser = argparse.ArgumentParser(description="Genpass: Generates passwords to use in IRL")
-    parser.add_argument("--hash", default="sha512", help="Algorithm to use for example: sha512, random")
-    parser.add_argument("--backend", default="stdout", help="Saving backend to use for (default = stdout)")
-    parser.add_argument("--data", default=random_word(), help="Human readable word (default = random word )")
     args = parser.parse_args()
 
     hash = getattr(hashes, args.hash)
