@@ -1,9 +1,7 @@
-import hashes
-import inspect
+from .utils import hash_codecs
 
-hash_codecs = [func[1] for func in inspect.getmembers(hashes, inspect.isfunction)]
-
-def test_all():
+def test_rough():
     for codec in hash_codecs:
         crypt = codec("genpass")
         assert crypt is not None
+        assert crypt != "genpass" # should not be
