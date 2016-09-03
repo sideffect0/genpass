@@ -1,4 +1,9 @@
-from genpass import parser
+import hashes
+import inspect
 
-def test_1():
-    pass
+hash_codecs = [func[1] for func in inspect.getmembers(hashes, inspect.isfunction)]
+
+def test_all():
+    for codec in hash_codecs:
+        crypt = codec("genpass")
+        assert crypt is not None
